@@ -16,3 +16,5 @@
     # *   bash scriptName.sh 
     # *   sh scriptName.sh 
     # *   ./scriptName
+
+echo Welcome to the shebang learning
