@@ -24,7 +24,23 @@ else
     echo "fail"
 fi
 
+echo -n "performing cleanup: "
+cd /usr/share/nginx/html
+rm -rf *    &>>  "/tmp/frontend.log"
 
+if [ $? -eq 0 ] ; then
+        echo "success"
+else 
+    echo "fail"
+fi
+
+# cd /usr/share/nginx/html
+# rm -rf *
+# unzip /tmp/frontend.zip
+# mv frontend-main/* .
+# mv static/* .
+# rm -rf frontend-main README.md
+# mv localhost.conf /etc/nginx/default.d/roboshop.conf
 # The frontend is the service in RobotShop to serve the web content over Nginx.
 
 # Install Nginx.
