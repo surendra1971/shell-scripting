@@ -37,6 +37,10 @@ mv static/* .               &>>  LOGFILE
 rm -rf frontend-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $?
+ech0 -n "starting frontend services: "
+systemctl enable nginx
+systemctl start nginx
+stat $?
 
 # cd /usr/share/nginx/html
 # rm -rf *
