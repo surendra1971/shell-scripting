@@ -1,12 +1,14 @@
 #!/bin/bash
-ID =$(id -u)
-if [ $ID -nq 0] ; then 
+component=frontend
+ID=$(id -u)
+
+if [ $ID -ne 0] ; then 
     echo -e "this script is run bt the root user "
-    exit 1
+    exit 1  
 fi
 
 echo "Installing nginx: "
-yum install nginx -y
+yum install nginx -y     &>> /tmp/$(component).log
 
 
 
