@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOGS=frontend
+
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then 
@@ -9,7 +9,12 @@ if [ $ID -ne 0 ] ; then
 fi
 
 echo "Installing nginx:"
-yum install nginx -y  &>>  "/tmp/$(LOGS).log"
+yum install nginx -y  &>>  "/tmp/frontend.log"
+if [ $? -eq 0 ] ; then
+        echo "success"
+else 
+    echo "fail"
+fi
 
 
 
