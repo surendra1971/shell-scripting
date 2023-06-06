@@ -8,7 +8,7 @@ if [ $ID -ne 0] ; then
 fi
 
 echo "Installing nginx: "
-yum install nginx -y     &>> /tmp/$(component).log
+yum install nginx -y     &>>  "/tmp/$(component).log"
 
 
 
