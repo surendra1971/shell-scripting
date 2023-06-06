@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPONENT=frontend
+LOGS=frontend
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then 
@@ -9,7 +9,7 @@ if [ $ID -ne 0 ] ; then
 fi
 
 echo "Installing nginx:"
-yum install nginx -y  &>>  "/tmp/$(COMPONENT).log"
+yum install nginx -y  &>>  "/tmp/$(LOGS).log"
 
 
 
