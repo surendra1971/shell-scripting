@@ -2,7 +2,7 @@
 
 COMPONENT=frontend
 ID=$(id -u)
-if [ $ID -ne 0] ; then 
+if [ $ID -ne 0 ] ; then 
     echo -e "this script is run bt the root user"
     exit 1  
 fi
