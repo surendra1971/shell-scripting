@@ -8,7 +8,7 @@ if [ $ID -ne 0 ] ; then
     exit 1  
 fi
 
-echo "Installing nginx:"
+echo -n "Installing nginx:"
 yum install nginx -y  &>>  "/tmp/frontend.log"
 if [ $? -eq 0 ] ; then
         echo "success"
@@ -16,7 +16,7 @@ else
     echo "fail"
 fi
 
-echo -n "downloading the frontend component"
+echo -n "downloading the frontend component:"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 if [ $? -eq 0 ] ; then
         echo "success"
