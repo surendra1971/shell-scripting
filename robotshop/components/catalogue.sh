@@ -1,6 +1,7 @@
 #!/bin/bash 
 
 COMPONENT="catalogue"
+<<<<<<< HEAD
 LOGFILE="/tmp/${COMPONENT}.log"
 APPUSER="roboshop"
 
@@ -74,3 +75,9 @@ npm install
 # $ cd /home/roboshop/catalogue
 # $ npm install
 # $ npm install
+=======
+
+source components/common.sh
+
+NODEJS                          # Calling Nodej Function
+>>>>>>> 622a68840694dd35dd193c38a5f5611cfabbc425
