@@ -51,11 +51,20 @@ mv $COMPONENT-main/ $COMPONENT
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT/
 stat $?
 
-
 echo -n "Installing NPM $COMPONENT artifacts"
 cd /home/${APPUSER}/${COMPONENT}/
 npm install
 
+
+
+
+# $ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+# $ cd /home/roboshop
+# $ unzip /tmp/catalogue.zip
+# $ mv catalogue-main catalogue
+# $ cd /home/roboshop/catalogue
+# $ npm install
+# $ npm install
 
 
 # $ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
