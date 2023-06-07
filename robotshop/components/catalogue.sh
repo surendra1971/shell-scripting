@@ -51,7 +51,9 @@ mv $COMPONENT-main/ $COMPONENT
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT/
 stat $?
 
-
+echo -n "Installing NPM $COMPONENT artifacts"
+cd /home/${APPUSER}/${COMPONENT}/
+npm install
 
 
 
