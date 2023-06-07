@@ -53,10 +53,10 @@ stat $?
 
 echo -n "Installing NPM $COMPONENT artifacts"
 cd /home/${APPUSER}/${COMPONENT}/
-npm install
+npm install   &>> $LOGFILE
 
 echo -n " updating the $COMPONENT systemd file"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal' /home/${APPUSER}/${COMPONENT}/systemd.servce
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/${APPUSER}/${COMPONENT}/systemd.servce
 mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $?
 
