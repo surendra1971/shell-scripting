@@ -47,7 +47,7 @@ unzip -o /tmp/catalogue.zip  &>> $LOGFILE
 stat $?
 
 echo -n "Modifying the ownership :"
-mv $COMPONENT-main/ $COMPONENT
+mv  -o $COMPONENT-main/ $COMPONENT
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT/
 stat $?
 
@@ -56,7 +56,7 @@ cd /home/${APPUSER}/${COMPONENT}/
 npm install   &>> $LOGFILE
 stat $?
 
-echo -n " updating the $COMPONENT systemd file"
+echo -n " updating the $COMPONENT systemd file: "
 sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/${APPUSER}/${COMPONENT}/systemd.servce
 mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $?
