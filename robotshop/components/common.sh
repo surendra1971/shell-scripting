@@ -118,5 +118,5 @@ JAVA() {
     MVN_PACKAGE
 
     CONFIGURE_SVC
-
 }
+
