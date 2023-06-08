@@ -1,2 +1,7 @@
-#!/bin/bash
-echo "I am an shipping"
+#!/bin/bash 
+
+COMPONENT="shipping"
+
+source components/common.sh
+
+JAVA                          # Calling Nodej Function
