@@ -121,3 +121,19 @@ JAVA() {
     CONFIGURE_SVC
 
 }
+JAVA() {
+    echo -e "*********** \e[35m $COMPONENT Installation has started \e[0m ***********"
+
+    echo -n "Installing Maven  :"
+    yum install maven -y   &>> $LOGFILE 
+    stat $?    
+
+    CREATE_USER                 # calling Create_user function to create the roboshop user account
+
+    DOWNLOAD_AND_EXTRACT        # calling DOWNLOAD_AND_EXTRACT  function download the content
+
+    MVN_PACKAGE
+
+    CONFIGURE_SVC
+
+}
